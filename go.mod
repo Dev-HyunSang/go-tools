@@ -1,4 +1,4 @@
-module github.com/dev-hyunsang/golang-tools
+module github.com/dev-hyunsang/go-tools
 
 go 1.18
 

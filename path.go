@@ -1,5 +1,5 @@
 // (C) 2022 HyunSang Park <me@hyunsang.dev>
-package golangtools
+package gotools
 
 import (
 	"io/ioutil"
