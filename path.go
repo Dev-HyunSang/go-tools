@@ -3,6 +3,7 @@ package gotools
 
 import (
 	"io/ioutil"
+	"log"
 	"os"
 
 	"github.com/huandu/xstrings"
@@ -42,9 +43,21 @@ func FindExt(fileName string) string {
 	return copyExtensions
 }
 
-func RemoveFile(path string) error {
+// 파일을 삭제하는 함수입니다.
+func DeleteFile(path string) error {
 	if err := os.RemoveAll(path); err != nil {
 		return err
 	}
 	return nil
+}
+
+// 현재의 경로를 알려줍니다.
+// ex ~/dev/golang/hello-world
+func Route() (path string) {
+	path, err := os.Getwd()
+	if err != nil {
+		log.Print("Failed to Local PathWay Checking")
+		os.Exit(1)
+	}
+	return path
 }
